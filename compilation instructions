@@ -22,3 +22,23 @@ MSMRegLib
 MSM
 
 Binaries will be deposited in the MSM folder
+
+# Build in docker
+
+Start the struct pipeline docker with:
+
+	docker run --rm -it --entrypoint /bin/bash \
+		biomedia/dhcp-structural-pipeline:emma
+
+Then:
+
+	cd /usr/src
+	git clone https://github.com/ecr05/MSM_HOCR.git
+	. /etc/fsl/fsl.sh 
+	. $FSLDIR/etc/fslconf/fsl.sh
+	export FSLDEVDIR=/usr/local/fsl
+	
+	
+
+
+

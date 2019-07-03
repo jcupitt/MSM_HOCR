@@ -1,6 +1,7 @@
 *.o
 *.a
 *~
+.*.swp
 depend.mk
 .DS_Store
 CVS
