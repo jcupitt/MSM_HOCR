@@ -23,7 +23,7 @@ MSM
 
 Binaries will be deposited in the MSM folder
 
-# Build in docker
+# Build in docker for the struct pipeline
 
 Start the struct pipeline docker with:
 
@@ -32,11 +32,19 @@ Start the struct pipeline docker with:
 
 Then:
 
-	cd /usr/src
-	git clone https://github.com/ecr05/MSM_HOCR.git
 	. /etc/fsl/fsl.sh 
+	edit ${FSLDIR}/etc/fslconf/fsl.sh and uncomment the lines for FSLCONFDIR FSLMACHTYPE
 	. $FSLDIR/etc/fslconf/fsl.sh
-	export FSLDEVDIR=/usr/local/fsl
+	export FSLDEVDIR=$FSLDIR
+	cd /usr/src
+	git clone https://github.com/jcupitt/MSM_HOCR.git
+	cd MSM_HOCR
+	git checkout struct-pipeline-build
+	cp -r extras/ELC1.04/ELC $FSLDEVDIR/extras/include/ELC
+	cp -r $FSLDIR/src/FastPDlib $FSLDEVDIR/extras/src
+	
+	
+	
 	
 	
 
