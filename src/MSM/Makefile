@@ -6,7 +6,7 @@ HOCR=True
 
 USRINCFLAGS=-I${INC_NEWMAT} -I${INC_NEWRAN} -I${INC_ZLIB} -I${INC_CPROB} -I${INC_PROB}  -I${INC_GD}  -I${INC_GDC} -I${INC_PNG} -I${INC_BOOST} -I./include -I${FSLDEVDIR}/include -I${FSLDEVDIR}/extras/include
 USRLDFLAGS=-L${LIB_NEWMAT} -L${LIB_NEWRAN} -L${LIB_ZLIB}  -L${LIB_CPROB} -L${LIB_PROB} -L${LIB_GDC} -L${LIB_PNG} -L${LIB_GD}   -L. -L${FSLDEVDIR}/lib  -L${FSLDEVDIR}/extras/lib
-LIBS= -lmeshreg -lfastpd -ldiscrete -lnewmeshclass -lfslsurface -lgiftiio -lmm -lexpat -lfslvtkio -lnewimage -lmiscmaths -lmiscplot -lmiscpic -lNewNifti -lutils  -lbint -lnewran -lprob -lznz -lgdc -lgd -lpng  -lz
+LIBS= -lmeshreg -lfastpd -ldiscrete -lnewmeshclass -lfslsurface -lgiftiio -lmm -lexpat -lfslvtkio -lnewimage -lmiscmaths -lmiscplot -lmiscpic -lNewNifti -lutils  -lbint -lnewran -lprob -lznz -lgdc -lgd -lpng  -lz -lopenblas -lgfortran
 
 ifdef HOCR
 	USRCXXFLAGS+= -std=c++11  -DHAS_HOCR
