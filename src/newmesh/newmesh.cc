@@ -1045,7 +1045,15 @@ namespace NEWMESH{
 	  
 	}
 	
-      }else {throw NEWMESHException(" mismatch between data and surface dimensions");}
+      }
+      else {
+	      printf("mismatch between data and surface dimensions\n");
+	      printf("dim = %d\n", dim);
+	      printf("nonSurfaceData[dim].getDim(0) = %d\n", 
+			      nonSurfaceData[dim].getDim(0));
+	      printf("_points.size() = %d\n", _points.size());
+	      throw NEWMESHException(" mismatch between data and surface dimensions");
+      }
       
     }
 
