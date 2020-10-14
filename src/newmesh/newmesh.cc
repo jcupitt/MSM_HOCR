@@ -1047,11 +1047,13 @@ namespace NEWMESH{
 	
       }
       else {
-	      printf("mismatch between data and surface dimensions\n");
-	      printf("dim = %d\n", dim);
-	      printf("nonSurfaceData[dim].getDim(0) = %d\n", 
-			      nonSurfaceData[dim].getDim(0));
-	      printf("_points.size() = %d\n", _points.size());
+	      cerr<<"Mesh::load_vtk:error in the header"<<endl;
+	      cerr<<"mismatch between data and surface dimensions"<<endl;
+	      cerr<<"dim = " << dim <<endl;
+	      cerr<<"nonSurfaceData[dim].getDim(0) = "<<
+			      nonSurfaceData[dim].getDim(0)<<endl;
+	      cerr<<"_points.size() = "<<_points.size()<<endl;
+	      cerr<<endl;
 	      throw NEWMESHException(" mismatch between data and surface dimensions");
       }
       
