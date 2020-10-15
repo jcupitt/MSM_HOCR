@@ -1049,6 +1049,9 @@ namespace NEWMESH{
       else {
 	      cerr<<"Mesh::load_vtk:error in the header"<<endl;
 	      cerr<<"mismatch between data and surface dimensions"<<endl;
+	      cerr<<"filename = " << filename <<endl;
+	      cerr<<"loadSurfaceData = " << loadSurfaceData <<endl;
+	      cerr<<"appendFieldData = " << appendFieldData <<endl;
 	      cerr<<"dim = " << dim <<endl;
 	      cerr<<"nonSurfaceData[dim].getDim(0) = "<<
 			      nonSurfaceData[dim].getDim(0)<<endl;
