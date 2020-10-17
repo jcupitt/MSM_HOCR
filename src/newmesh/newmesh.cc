@@ -993,6 +993,11 @@ namespace NEWMESH{
   }
 
   void newmesh::load_gifti(const string& filename, const bool loadSurfaceData, const bool appendFieldData) {
+
+    cerr<<"newmesh::load_gifti: filename = " << filename <<endl;
+      cerr<<"\tloadSurfaceData = " << loadSurfaceData <<endl;
+      cerr<<"\tappendFieldData = " << appendFieldData <<endl;
+
     GIFTIwrapper reader;
     reader.readGIFTI(filename);
 
@@ -1047,11 +1052,7 @@ namespace NEWMESH{
 	
       }
       else {
-	      cerr<<"Mesh::load_vtk:error in the header"<<endl;
 	      cerr<<"mismatch between data and surface dimensions"<<endl;
-	      cerr<<"filename = " << filename <<endl;
-	      cerr<<"loadSurfaceData = " << loadSurfaceData <<endl;
-	      cerr<<"appendFieldData = " << appendFieldData <<endl;
 	      cerr<<"dim = " << dim <<endl;
 	      cerr<<"nonSurfaceData[dim].getDim(0) = "<<
 			      nonSurfaceData[dim].getDim(0)<<endl;
