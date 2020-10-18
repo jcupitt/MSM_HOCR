@@ -994,9 +994,11 @@ namespace NEWMESH{
 
   void newmesh::load_gifti(const string& filename, const bool loadSurfaceData, const bool appendFieldData) {
 
-    cerr<<"newmesh::load_gifti: filename = " << filename <<endl;
-      cerr<<"\tloadSurfaceData = " << loadSurfaceData <<endl;
-      cerr<<"\tappendFieldData = " << appendFieldData <<endl;
+    cerr << "newmesh::load_gifti: filename = " << filename << endl;
+    cerr << "\tloadSurfaceData = " << loadSurfaceData << endl;
+    cerr << "\tappendFieldData = " << appendFieldData << endl;
+    cerr << "\t_points.size() = " << _points.size() << endl;
+    cerr << "\t_triangles.size() = " << _triangles.size() << endl;
 
     GIFTIwrapper reader;
     reader.readGIFTI(filename);
@@ -1056,7 +1058,6 @@ namespace NEWMESH{
 	      cerr<<"dim = " << dim <<endl;
 	      cerr<<"nonSurfaceData[dim].getDim(0) = "<<
 			      nonSurfaceData[dim].getDim(0)<<endl;
-	      cerr<<"_points.size() = "<<_points.size()<<endl;
 	      cerr<<endl;
 	      throw NEWMESHException(" mismatch between data and surface dimensions");
       }
