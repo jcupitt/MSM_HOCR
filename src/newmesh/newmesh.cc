@@ -1029,6 +1029,10 @@ namespace NEWMESH{
 	Triangle t(_points[points[0]],_points[points[1]],_points[points[2]], triangle);
 	push_triangle(t);
       }      
+
+      cerr << "loaded surface data from " << filename << endl;
+      cerr << "\t_points.size() = " << _points.size() << endl;
+      cerr << "\t_triangles.size() = " << _triangles.size() << endl;
     }
    
     vector<GIFTIfield> nonSurfaceData=reader.returnNonSurfaceFields();
